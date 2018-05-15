@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 var data = ['apple', 'orange', 'mango', 'peach'];
 
+app.get('/', function(reg, res) {
+  res.send('Please Path >> /apple or /orange or /mango or /peach');
+});
+
 app.get('/apple', function(reg, res) {
   res.send('Apple Index : ' + String(data.indexOf('apple')));
 });
